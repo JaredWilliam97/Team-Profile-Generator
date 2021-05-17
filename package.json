@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/JaredWilliam97/Team-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/JaredWilliam97/Team-Profile-Generator#readme"
+  "homepage": "https://github.com/JaredWilliam97/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquire": "^0.4.8",
+    "jest": "^26.6.3"
+  }
 }
