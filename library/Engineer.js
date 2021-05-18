@@ -6,9 +6,14 @@ class Engineer extends Employee {
     this.git = github;
   }
 
-  officeNumb() {}
+  getGitHub() {
+    return this.git;
+  }
 
   getRole() {
-    return "github";
+    return "Engineer";
   }
 }
+module.exports = Engineer;
+
+// const myEngineer = new Engineer("Jared", 1, "sutch@yahoo.com", "jsutch");

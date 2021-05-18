@@ -85,7 +85,7 @@ const addQuestions = [
 
 function writeToFile(fileName, data) {
   //path - join method
-  fs.writeFile(path.join(__dirname + "/dist", fileName), data, (err) =>
+  fs.writeFile(path.join(__dirname + "/dist/", fileName), data, (err) =>
     err ? console.error(err) : console.log("Success!")
   );
 }
@@ -108,7 +108,7 @@ function askAdd() {
     } else if (data.add === "Intern") {
       askIntern();
     } else {
-      writeToFile();
+      writeToFile("index.html");
     }
   });
 }
