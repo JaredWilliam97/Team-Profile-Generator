@@ -1,23 +1,25 @@
-function renderManager(employee) {
+function renderManager(teamMembers) {
   return ` <div class="row">
-  <div class="card text-white bg-primary m-3 col-2">
-    <div class="card-header">Manager: ${employee.employeeName()}</div>
-    <div class="card-body">
-      <p class="card-text">ID: ${employee.employeeId()}</p>
-      <p class="card-text">Email: ${employee.employeeEmail()}</p>
-      <p class="card-text">Office number: ${employee.officeNum()}</p>
-    </div>
-  </div>`;
+<div class="card text-white bg-primary m-3 col-2">
+  <div class="card-header">Manager: ${teamMembers[0].name}</div>
+  <div class="card-body">
+    <p class="card-text">ID: ${teamMembers[0].id}</p>
+    <p class="card-text">Email: <a href="mailto:${teamMembers[0].email}">${
+    teamMembers[0].email
+  }</a></p>
+    <p class="card-text">Office number: ${teamMembers[0].getOffice()}</p>
+  </div>
+</div>`;
 }
 
 function renderEngineer(employee) {
   return ` <div class="row">
   <div class="card text-white bg-primary m-3 col-2">
-    <div class="card-header">Engineer: ${employee.employeeName()}</div>
+    <div class="card-header">Engineer: ${employee.employeeName}</div>
     <div class="card-body">
-      <p class="card-text">ID: ${employee.employeeId()}</p>
-      <p class="card-text">Email: ${employee.employeeEmail()}</p>
-      <p class="card-text">Git Hub: ${employee.getGitHub()}</p>
+      <p class="card-text">ID: ${employee.employeeId}</p>
+      <p class="card-text">Email: ${employee.employeeEmail}</p>
+      <p class="card-text">Git Hub: ${employee.getGitHub}</p>
     </div>
   </div>`;
 }
@@ -25,11 +27,11 @@ function renderEngineer(employee) {
 function renderIntern(employee) {
   return ` <div class="row">
   <div class="card text-white bg-primary m-3 col-2">
-    <div class="card-header">Intern: ${employee.employeeName()}</div>
+    <div class="card-header">Intern: ${employee.employeeName}</div>
     <div class="card-body">
-      <p class="card-text">ID: ${employee.employeeId()}</p>
-      <p class="card-text">Email: ${employee.employeeEmail()}</p>
-      <p class="card-text">Office number: ${employee.employeeSchool()}</p>
+      <p class="card-text">ID: ${employee.employeeId}</p>
+      <p class="card-text">Email: ${employee.employeeEmail}</p>
+      <p class="card-text">Office number: ${employee.employeeSchool}</p>
     </div>
   </div>`;
 }
@@ -41,7 +43,7 @@ function renderHeader() {
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="./bootstrap.min.css" />
-  
+
       <title>Team Profile</title>
       </head>
       <body>
