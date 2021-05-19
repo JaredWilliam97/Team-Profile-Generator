@@ -3,7 +3,7 @@ const Engineer = require("../lib/Engineer.js");
 
 describe("Engineer", () => {
   describe("Initialization", () => {
-    it("should create an object with a name, an id, and an email", () => {
+    it("should create an object with a name, an id, and an email and github", () => {
       const employee = new Engineer("Jared", 123456, "sutch002@yahoo.com");
 
       expect(employee.name).toEqual("Jared");

@@ -12,29 +12,39 @@ function renderManager(teamMembers) {
 </div>`;
 }
 
-function renderEngineer(employee) {
-  return ` <div class="row">
-  <div class="card text-white bg-primary m-3 col-2">
-    <div class="card-header">Engineer: ${employee.employeeName}</div>
-    <div class="card-body">
-      <p class="card-text">ID: ${employee.employeeId}</p>
-      <p class="card-text">Email: ${employee.employeeEmail}</p>
-      <p class="card-text">Git Hub: ${employee.getGitHub}</p>
-    </div>
-  </div>`;
+function renderEngineer(teamMembers) {
+  const engineers = teamMembers.filter((obj) => obj.getRole() === "Engineer");
+  let engString = "";
+  engineers.forEach((engineer) => {
+    engString += ` <div class="card text-white bg-primary m-3 col-2">
+        <div class="card-header">Engineer: ${engineer.getName()}</div>
+        <div class="card-body">
+          <p class="card-text">ID: ${engineer.getId()}</p>
+          <p class="card-text">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
+          <p class="card-text">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></p>
+        </div>
+      </div>`;
+  });
+  return engString;
 }
 
-function renderIntern(employee) {
-  return ` <div class="row">
-  <div class="card text-white bg-primary m-3 col-2">
-    <div class="card-header">Intern: ${employee.employeeName}</div>
-    <div class="card-body">
-      <p class="card-text">ID: ${employee.employeeId}</p>
-      <p class="card-text">Email: ${employee.employeeEmail}</p>
-      <p class="card-text">Office number: ${employee.employeeSchool}</p>
-    </div>
-  </div>`;
+function renderIntern(teamMembers) {
+  const interns = teamMembers.filter((obj) => obj.getRole() === "Intern");
+
+  let internString = "";
+  interns.forEach((intern) => {
+    internString += ` <div class="card text-white bg-primary m-3 col-2">
+        <div class="card-header">Engineer: ${intern.getName()}</div>
+        <div class="card-body">
+          <p class="card-text">ID: ${intern.getId()}</p>
+          <p class="card-text">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></p>
+          <p class="card-text">School: ${intern.getSchool()}</p>
+        </div>
+      </div>`;
+  });
+  return internString;
 }
+
 function renderHeader() {
   return `<!DOCTYPE html>
   <html lang="en">
