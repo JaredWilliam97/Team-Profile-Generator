@@ -21,7 +21,7 @@ function renderEngineer(teamMembers) {
         <div class="card-body">
           <p class="card-text">ID: ${engineer.getId()}</p>
           <p class="card-text">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
-          <p class="card-text">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></p>
+          <p class="card-text">GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank">${engineer.getGitHub()}</a></p>
         </div>
       </div>`;
   });

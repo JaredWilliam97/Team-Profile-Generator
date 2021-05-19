@@ -11,3 +11,5 @@ My application used Jest for running the unit tests and used Inquirer as well.
 This project was very challenging which took me a long time to figure out.
 
 I created a walk through video so you can see the functionality.
+
+Credits: Alex Jurgs, Chip Long, Lacey Pape, Josh Lee, Lauren Gabaldon, Tarik Maggio
