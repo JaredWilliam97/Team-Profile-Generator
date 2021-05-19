@@ -29,7 +29,7 @@ function renderIntern(employee) {
     <div class="card-body">
       <p class="card-text">ID: ${employee.employeeId()}</p>
       <p class="card-text">Email: ${employee.employeeEmail()}</p>
-      <p class="card-text">Office number: ${teamMembers[0].office}</p>
+      <p class="card-text">Office number: ${employee.employeeSchool()}</p>
     </div>
   </div>`;
 }
