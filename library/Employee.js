@@ -9,15 +9,15 @@ class Employee {
     this.email = email;
   }
 
-  employeeName() {
+  getName() {
     return this.name;
   }
 
-  employeeId() {
+  getId() {
     return this.id;
   }
 
-  employeeEmail() {
+  getEmail() {
     return this.email;
   }
 
