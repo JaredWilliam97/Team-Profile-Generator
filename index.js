@@ -1,9 +1,10 @@
 const fs = require("fs");
+const path = require("path");
 const inquirer = require("inquirer");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
-const Manager = require("./lib/Manager");
-const generateMarkdown = require("./generateMarkdown");
+const Engineer = require("./library/Engineer");
+const Intern = require("./library/Intern");
+const Manager = require("./library/Manager");
+const generateMarkdown = require("./src/generateHTML");
 const teamMembers = [];
 
 const managerQuestions = [
@@ -137,6 +138,6 @@ function askIntern() {
     })
     .then(askAdd);
 }
-writeToFile("index.html", generateMarkdown(data));
+writeToFile("index.html", generateMarkdown(teamMembers));
 // Function call to initialize app
 init();
