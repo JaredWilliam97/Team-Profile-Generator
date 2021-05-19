@@ -4,13 +4,9 @@ I created Node.js command-line application that takes in information about emplo
 
 I provided a link to a walk through video that demonstrates its functionality and all of the tests passing.
 
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
-
 This homework will combine many of the skills we've covered so far. In addition to the User Story and Acceptance Criteria.
 
 My application used Jest for running the unit tests and used Inquirer as well.
-
-This homework is graded based on the following criteria:
 
 This project was very challenging which took me a long time to figure out.
 
